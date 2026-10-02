@@ -114,3 +114,13 @@ node seed.mjs
 - **ITU-R BT.1702-2**: Guidance for the reduction of photosensitive epileptic seizures caused by television.
 - **CBFC Guidelines 2023**: Indian Cinematograph Act 1952 statutory rating directives.
 - **WHO Auditory Safety Standards**: High-decibel sound threshold (>85 dB sustained, >115 dB impulse blast).
+
+---
+## Technical Retrieval Architecture & Dataset Transparency
+### Retrieval Mechanism
+* **Active Production Engine**: Direct **GROQ queries over the Sanity Content Lake HTTP Query API** (`https://<projectId>.api.sanity.io/v2024-01-01/data/query/<dataset>`).
+* **Agent Tool Integration**: Implemented as a Vercel AI SDK tool named `search_knowledge_base` inside `web/src/lib/mcp-client.ts`, which dereferences the relational graph in ~100ms.
+* **MCP Compatibility**: Includes a JSON-RPC 2.0 client adapter (`callSanityContextMcp`) structured to communicate with Model Context Protocol (MCP) endpoints.
+### Dataset Authenticity Disclaimer
+* **Titles, CBFC Classifications, and Documented Hazards**: Sourced from official public film records and well-documented media advisories (e.g., Disney's theatrical warning letters for *Incredibles 2* photic seizures, public dynamic audio reports for *Oppenheimer* and *A Quiet Place*, CBFC certification database entries).
+* **Timestamps & Acoustic Measurements**: Exact runtime timestamps and decibel surge values are **curated demonstration data created for the Sanity Challenge 2026 to model real-world clinical schemas**, not laboratory EEG or sound meter certified datasets.
