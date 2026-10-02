@@ -51,7 +51,7 @@ USHER solves the high-stakes problem of cinematic compliance:
 ## Project Structure
 
 ```
-d:/flixguard/
+usher/
 ├── studio/             # Sanity Studio schemas & seeding script
 │   ├── schemas/        # movie, triggerWarning, accessibilityRule, cbfcRating
 │   ├── seed.mjs        # Master seeder (42 titles, 13 triggers, 7 rules, 5 ratings)
