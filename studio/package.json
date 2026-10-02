@@ -1,0 +1,26 @@
+{
+  "name": "flixguard-studio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "sanity dev",
+    "start": "sanity start",
+    "build": "sanity build",
+    "deploy": "sanity deploy",
+    "seed": "node seed.mjs"
+  },
+  "dependencies": {
+    "@sanity/client": "^6.27.2",
+    "@sanity/vision": "^3.71.0",
+    "dotenv": "^16.4.7",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "sanity": "^3.71.0",
+    "styled-components": "^6.1.14"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.8",
+    "typescript": "^5.7.3"
+  }
+}
